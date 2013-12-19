@@ -1,5 +1,7 @@
 class PasswordResetsController < ApplicationController
   skip_before_filter :require_signin
+  def index
+  end
   def create
     user = User.find_by_email(params[:email])
     user.send_password_reset if user
@@ -21,3 +23,4 @@ class PasswordResetsController < ApplicationController
    end
 end
 end
+
