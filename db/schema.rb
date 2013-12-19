@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131211030903) do
+ActiveRecord::Schema.define(version: 20131219040652) do
 
   create_table "events", force: true do |t|
     t.string   "location"
@@ -44,6 +44,9 @@ ActiveRecord::Schema.define(version: 20131211030903) do
     t.datetime "oauth_expires_at"
     t.string   "uid"
     t.string   "provider"
+    t.string   "auth_token"
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

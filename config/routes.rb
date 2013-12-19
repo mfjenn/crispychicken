@@ -1,10 +1,12 @@
 Crispychicken::Application.routes.draw do
+  resources :password_resets
   resources :contact_forms
   get "contact_form/new"
   get "contact_form/create"
   match '/events/public',  to: 'events#public', via: 'get'
 
-  resources :users, :events, :sessions 
+  resources :users, :events, :sessions
+  
   match '/about',  to: 'information#about',            via: 'get'
   match '/contact',  to: 'contact_forms#new',    via: 'get' , :as => :contact
   match '/thank_you', to: 'contact_forms#thank_you', via: 'post', :as => :thank_you

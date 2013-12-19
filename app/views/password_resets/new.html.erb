@@ -1,0 +1,16 @@
+<div class="row rowheading">
+  <div class="heading">
+    <h1>Forgot Your Password?</h1>
+    <h4>Aww, it happens to the best of us. Let us help. </h4>
+  </div>
+</div>
+<div class="container marketing">
+<div class="col-md-4"></div>
+<div class="col-md-4 well">
+<%= form_tag password_resets_path, :method => :post do %>
+  <div  class="form-group">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, params[:email], :class => "form-control" %>
+  </div>
+ <div class="form-group text-center"><%= submit_tag "Reset Password", :class => "btn btn-lg btn-primary" %></div>
+<% end %>
