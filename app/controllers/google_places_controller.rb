@@ -1,7 +1,5 @@
  class GooglePlacesController < ApplicationController
-   #if location needs to be set before user signs in, uncomment this line
-   skip_before_filter :require_signin 
-
+#TODO: needs to be improved
    def index
    end
 
