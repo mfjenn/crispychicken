@@ -8,8 +8,7 @@ skip_before_filter :require_signin
       begin
         @contact_form = ContactForm.new(params[:contact_form])
         @contact_form.request = request
-        if @contact_form.valid?
-          @contact_form.deliver
+        if @contact_form.deliver
           render :thank_you
         else
           render :new
