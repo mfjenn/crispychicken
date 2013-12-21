@@ -4,15 +4,14 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: { case_sensitive: false }, :format => { :with => /\b[A-Z0-9._%a-z-]+@(?:[A-Z0-9a-z-]+.)+[A-Za-z]{2,4}\z/ } 
   has_many :events
   has_secure_password 
+  attr_accessible :email, :auth_token, 
   
   before_create { generate_token(:auth_token) }
   
   def send_password_reset
     generate_token(:password_reset_token)
     self.password_reset_sent_at = Time.zone.now
-    save!(:validate => false)
-    UserMailer.password_reset(self).deliver
-    redirect_to root_url, :notice => "Thanks! Check your email to reset your passwor!"
+    save(:validate => false)
   end
   
   def generate_token(column)

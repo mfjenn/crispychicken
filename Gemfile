@@ -14,6 +14,8 @@ gem 'font-awesome-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+gem "mail_form", "~> 1.5.0"
+
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
@@ -59,7 +61,7 @@ gem 'bcrypt-ruby'
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 
-gem "mail_form", "~> 1.5.0"
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

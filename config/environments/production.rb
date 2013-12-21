@@ -70,7 +70,7 @@ Crispychicken::Application.configure do
   config.action_mailer.smtp_settings = {
       :address => "smtp.live.com",
       :port => 587,
-      :domain => "smtp.live.com",
+      :domain => "live.com",
       :user_name => "Crispy_Chicken@live.com",
       :password => "Chispa888",
       :authentication => "plain",
