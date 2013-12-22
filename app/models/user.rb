@@ -4,23 +4,22 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: { case_sensitive: false }, :format => { :with => /\b[A-Z0-9._%a-z-]+@(?:[A-Z0-9a-z-]+.)+[A-Za-z]{2,4}\z/ } 
   has_many :events
   has_secure_password 
-  attr_accessible :email, :auth_token
+  attr_accessible :email, :auth_token, 
   
   before_create { generate_token(:auth_token) }
-  
-  def send_password_reset
-    generate_token(:password_reset_token)
-    self.password_reset_sent_at = Time.zone.now
-    save!(:validate => false)
-    UserMailer.password_reset(self).deliver
-    redirect_to root_url, :notice => "Thanks! Check your email to reset your passwor!"
-  end
-  
-  def generate_token(column)
-    begin
-      self[column] = SecureRandom.urlsafe_base64
-    end while User.exists?(column => self[column])
-  end
+
+def send_password_reset
+  generate_token(:password_reset_token)
+  self.password_reset_sent_at = Time.zone.now
+  save!
+  UserMailer.password_reset(self).deliver
+end
+
+def generate_token(column)
+  begin
+    self[column] = SecureRandom.urlsafe_base64
+  end while User.exists?(column => self[column])
+end
   
   
   def self.from_omniauth(auth)
