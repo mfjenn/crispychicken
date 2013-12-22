@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
   include Rails.application.routes.url_helpers 
-  validates :firstname, :lastname, :email, :password, :password_confirmation, presence: true
+  #validates :firstname, :lastname, :email, :password, :password_confirmation, presence: true
   validates :email, uniqueness: { case_sensitive: false }, :format => { :with => /\b[A-Z0-9._%a-z-]+@(?:[A-Z0-9a-z-]+.)+[A-Za-z]{2,4}\z/ } 
   has_many :events
-  has_secure_password 
+  #has_secure_password 
   attr_accessible :email, :auth_token, 
   
   before_create { generate_token(:auth_token) }
