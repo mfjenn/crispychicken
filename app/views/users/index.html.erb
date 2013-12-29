@@ -33,20 +33,20 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="/assets/Crispy_Example_4.png" alt="Crispy Chicken">
+          <%= image_tag("Crispy_Example_4.png", :class => "img-circle", :alt => "CrispyChicken") %>
           <h2>What is CrispyChicken?</h2>
           <p>Crispy Chicken allows you to create a customized map for your next group event and share it with your guests.<br> 
      (Of course, crispy chicken is also a delicious entreé.)</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="/assets/Crispy_Example_4.png" alt="Crispy Chicken">
+          <%= image_tag("Crispy_Example_4.png", :class => "img-circle", :alt => "CrispyChicken") %>
           <h2>Why CrispyChicken?</h2>
           <p>- Put multiple events on one map <br>
       - Provide detailed event descriptions for your guests<br>
       -Share your event information by email or on facebook, twitter, or google+</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="/assets/Crispy_Example_4.png" alt="Crispy Chicken">
+          <%= image_tag("Crispy_Example_4.png", :class => "img-circle", :alt => "CrispyChicken") %>
           <h2>How do I use CrispyChicken?</h2>
           <p>Just click the Get Started button above to create an account and start adding your events!</p>
           <p><a class="btn btn-default" href="#" role="button">To Top of Page &raquo;</a></p>
@@ -63,13 +63,13 @@
           <p class="lead">Your guests will always have the information they need because we confirm that you've given them an address, a date, a time, a location name, and as many other details as you'd like.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="/assets/Crispy_Example_2.png" alt="An example event listing">
+          <%= image_tag("Crispy_Example_2.png", :class => "featurette-image img-responsive", :alt => "An example event listing") %>
         </div>
       </div>
 
       <div class="row featurette" style=>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="/assets/Crispy_Example_3.png" alt="An example map with multiple events">
+          <%= image_tag("Crispy_Example_3.png", :class => "featurette-image img-responsive", :alt => "An example map with multiple events") %>
         </div>
         <div class="col-md-7">
           <h2 class="featurette-heading">Put Multiple Destinations <span class="text-muted">On One Zoomable Map </span></h2>
@@ -131,7 +131,7 @@
         </div>
 	<a href="/auth/facebook" id="sign_in">
 	<div class="pull-right btn btn-primary facebook">
-	  <span>Register with Facebook</span> <img src="/assets/facebook.png" width="25" align="right">
+	  <span>Register with Facebook</span> <%= image_tag("facebook.png", :width => "25", :align => "right") %>
 	</div>
 	</a>
       <% end %>

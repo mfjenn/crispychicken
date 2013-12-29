@@ -7,7 +7,7 @@
 <div class="container marketing">
 <div class="col-md-4"></div>
 <div class="col-md-4 well">
-  <img src="/assets/chicken.png" >
+  <%= image_tag("chicken.png") %>
   <%= form_for @user do |f| %>
     <div class="form-group">
       <%= f.label :firstname, "First Name" %>
