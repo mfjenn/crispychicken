@@ -28,6 +28,7 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
+    bcrypt-ruby (3.1.2-x86-mingw32)
     bootstrap-sass (3.0.3.0)
       sass (~> 3.2)
     builder (3.1.4)
@@ -138,6 +139,7 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.8)
+    sqlite3 (1.3.8-x86-mingw32)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
       ref
@@ -158,6 +160,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   bcrypt-ruby
