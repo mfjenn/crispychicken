@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^midnightepiphanies.com.com
+RewriteRule (.*) http://www.midnightepiphanies.com/$1 [R=301,L]
