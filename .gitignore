@@ -15,3 +15,8 @@
 /log/*.log
 /tmp
 
+# Ignore precompiled assets
+/public/assets
+
+# Ignore Gemfile.lock
+Gemfile.lock
